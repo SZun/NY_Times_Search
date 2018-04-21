@@ -1,3 +1,5 @@
+/* eslint-env browser, jquery */
+
 var urlFormat = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q='
 var apiKey = '8fd501e6f6ec474db1e3f712f2ac9260';
 
@@ -6,31 +8,34 @@ var searchResults;
 var resultCountField;
 
 $(document).ready(function () {
-    searchField = $('#search-field');
-    searchResults $('#search-results');
-    resultCountField = $('#records-count');
-});
+  searchField = $('#search-field');
+  searchResults = $('#search-results');
+  resultCountField = $('#num-records-select');
 
-$('#search-button').on('click', function () {
-    var searchTerm = searchField.val();
-    var queryURL = urlFormat + searchTerm + '&api_key=' + apiKey;
+  $('#search-button').on('click', function(event) {
+    event.preventDefault();
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function(response) {
-        var elements = createNewElements(response);
+      var searchTerm = searchField.val();
+      var queryURL = urlFormat + searchTerm + '&api_key=' + apiKey;
 
-        clearSearchResults();
+      $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(data) {
+          var elements = createNewElements(data.response);
 
-        $.each(elements, function(i, element) {
-            searchResults.append(element);
-        });
-    };
-});
+          clearSearchResults();
 
-$('#clear-button').on('click', function () {
+          $.each(elements, function(i, element) {
+              searchResults.append(element);
+          });
+      });
+  });
+
+  $('#clear-button').on('click', function (event) {
+    event.preventDefault();
     clearSearchResults();
+  });
 });
 
 function clearSearchResults() {
@@ -58,7 +63,7 @@ function createNewElements(response) {
         }
 
         var clicky = $('<a class="article-anchor">');
-        clicky.attr('href' = doc.web_url);
+        clicky.attr('href', doc.web_url);
 
         clicky.append(title);
         clicky.append(author);
