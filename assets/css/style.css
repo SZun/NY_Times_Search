@@ -1,0 +1,41 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    overflow-x: none;
+}
+body{
+    background: url('../images/fake_brick.png')
+}
+.panel-body a {
+    word-break: break-all;
+  }
+
+.btn-dark {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.btn-dark:hover{
+    color: #000000;
+    background: #FFFFFF;
+}
+#newspaperBG, .panel-body{
+    background: url()
+}
+.panel-body {
+    background-image: url("https://www.subtraction.com/wp-content/uploads/2017/06/2017-06-21-new-york-times-issue-1.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 1px 1px #FFFFFF;
+}
+.jumbotron {
+    background-image: url("https://www.subtraction.com/wp-content/uploads/2017/06/2017-06-21-new-york-times-issue-1.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
