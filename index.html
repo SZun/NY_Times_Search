@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<link href="./OldeEnglish.ttf">
+
 <head>
   <meta charset="UTF-8">
   <title>New York Times Search</title>
@@ -20,10 +22,17 @@
   <!-- Main Bootstrap Search -->
   <div class="container">
 
+
+  <br>
+
     <!-- Jumbotron for Title -->
-    <div class="jumbotron"  class="newspaperBG" style="background-color: #FFFFFF;">
-      <h1 class="text-center"><strong>
-          <br><i class="fa fa-search"></i></strong></h1>
+    <div class="jumbotron"  style="background-color: #FFFFFF;">
+      <h1 id="nytLogo" class="text-center">The New York Times
+        <br>
+        <strong>
+          <i id="searchIcon" class="fa fa-search"></i>
+        </strong>
+        </h1>
     </div>
 
     <!-- Row for Searching New York Times -->
@@ -90,11 +99,11 @@
           <!-- Panel Heading for the retrieved articles box -->
           <div class="panel-heading">
             <h3 class="panel-title"><strong><i class="fa fa-table"></i>   Top Articles</strong></h3>
-            <ul id="search-results"></ul>
           </div>
 
           <!-- This main panel will hold each of the resulting articles -->
-          <div class="panel-body" id="well-section">
+          <div class="panel-body bottom-panel" id="well-section">
+              <ul id="search-results"></ul>
           </div>
         </div>
       </div>
