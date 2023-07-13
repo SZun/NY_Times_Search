@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     var searchTerm = searchField.val().replace(/\s/g, '+');
     var queryURL = urlFormat + searchTerm + '&api-key=' + apiKey;
-    print(queryURL)
+
     $.ajax({
       url: queryURL,
       method: "GET"
