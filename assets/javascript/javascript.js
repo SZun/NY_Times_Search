@@ -1,7 +1,7 @@
 /* eslint-env browser, jquery */
 
-var urlFormat = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=';
-var apiKey = '8fd501e6f6ec474db1e3f712f2ac9260';
+var urlFormat = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q='
+var apiKey = 't4gQG00zUNbHZOxjmWAHaxxU0JVy1FTC';
 
 var searchField;
 var searchResults;
@@ -15,9 +15,9 @@ $(document).ready(function() {
   $('#search-button').on('click', function(event) {
     event.preventDefault();
 
-    var searchTerm = searchField.val();
-    var queryURL = urlFormat + searchTerm + '&api_key=' + apiKey;
-
+    var searchTerm = searchField.val().replace(/\s/g, '+');
+    var queryURL = urlFormat + searchTerm + '&api-key=' + apiKey;
+    print(queryURL)
     $.ajax({
       url: queryURL,
       method: "GET"

@@ -71,7 +71,7 @@ a {
 
   @font-face {
     font-family: "Olde English";
-    src: url("../../OldeEnglish.ttf");
+    src: url("../fonts/OldeEnglish.ttf");
     }
 #nytLogo{
     font-family: "Olde English";
