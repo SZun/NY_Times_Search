@@ -1,7 +1,7 @@
-# nytimesSearch
+# New York Times Search
 Updated New York Times Search Project
 
-Link to deployed version: https://nakrap.github.io/nytimesSearch/
+Link to deployed version: https://szun.github.io/NY_Times_Search/
 
 Problem: Create a website using a New York Times search API that would output New York Times articles using a specified search term, limit of articles (5,10 or 15) as well as being between a certain time period. 
 
